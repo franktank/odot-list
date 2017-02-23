@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> items;
@@ -67,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 });
+
+        lvItems.setOnTouchListener(
+                new View.OnTouchListener() {
+
+                }
+        );
     }
 
     public void onAddItem(View v) {
