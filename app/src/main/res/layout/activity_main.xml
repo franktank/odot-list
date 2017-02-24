@@ -10,36 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.fliangz.todo.MainActivity">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvItems"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnAddItem" />
 
-    <EditText
+    <com.myscript.atk.scw.SingleCharWidget
+        android:id="@+id/singleChar_widget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etNewItem"
-        android:layout_alignTop="@+id/btnAddItem"
-        android:hint="Enter a new item"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/btnAddItem"
-        android:layout_toStartOf="@+id/btnAddItem"
-        android:layout_alignParentBottom="true" />
+        android:layout_below="@+id/btnAddItem"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Item"
         android:id="@+id/btnAddItem"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:onClick="onAddItem"
-        />
+        android:layout_alignTop="@+id/etNewItem"
+        android:layout_toRightOf="@+id/etNewItem"
+        android:layout_toEndOf="@+id/etNewItem"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="295dp"
+        android:id="@+id/lvItems"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNewItem"
+        android:hint="Enter a new item"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/lvItems"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
 
 </RelativeLayout>
